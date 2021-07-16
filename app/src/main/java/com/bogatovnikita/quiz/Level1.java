@@ -24,6 +24,10 @@ public class Level1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
 
+        TextView textLevels = findViewById(R.id.tv_levels);
+        textLevels.setText(R.string.level1);
+
+
         final ImageView imgLeft = findViewById(R.id.img_left);
         imgLeft.setClipToOutline(true);
 
