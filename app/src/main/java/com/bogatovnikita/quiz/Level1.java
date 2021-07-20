@@ -10,13 +10,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class Level1 extends AppCompatActivity {
 
     Dialog dialog;
+
+    public int numLeft;
+    public int numRight;
+    Array array = new Array();
+    Random random = new Random();
+    public int count = 0;
 
 
     @Override
@@ -33,6 +43,9 @@ public class Level1 extends AppCompatActivity {
 
         final ImageView imgRight = findViewById(R.id.img_right);
         imgRight.setClipToOutline(true);
+
+        final TextView textLeft = findViewById(R.id.text_left);
+        final TextView textRight = findViewById(R.id.text_right);
 
         Window window = getWindow();
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -84,7 +97,22 @@ public class Level1 extends AppCompatActivity {
                 }
             }
         });
+
+        final Animation a = AnimationUtils.loadAnimation(Level1.this, R.anim.alpha);
+        numLeft = random.nextInt(10);
+        imgLeft.setImageResource(array.imageOne[numLeft]);
+        textLeft.setText(array.textOne[numLeft]);
+
+        numRight = random.nextInt(10);
+
+        while (numLeft == numRight) {
+            numRight = random.nextInt(10);
+        }
+
+        imgRight.setImageResource(array.imageOne[numRight]);
+        textRight.setText(array.textOne[numRight]);
     }
+
     @Override
     public void onBackPressed() {
         try {
