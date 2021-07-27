@@ -137,6 +137,7 @@ public class Level1 extends AppCompatActivity {
                         if (count < 20) {
                             count++;
                         }
+
                         for (int i = 0; i < 20; i++) {
                             TextView textView = findViewById(progress[i]);
                             textView.setBackgroundResource(R.drawable.style_points);
@@ -144,8 +145,8 @@ public class Level1 extends AppCompatActivity {
                         for (int i = 0; i < count; i++) {
                             TextView textView = findViewById(progress[i]);
                             textView.setBackgroundResource(R.drawable.style_points_green);
-
                         }
+
                     } else {
                         if (count > 0) {
                             if (count == 1) {
@@ -161,27 +162,27 @@ public class Level1 extends AppCompatActivity {
                         for (int i = 0; i < count; i++) {
                             TextView textView = findViewById(progress[i]);
                             textView.setBackgroundResource(R.drawable.style_points_green);
-
                         }
-                        if (count == 20) {
-                            //выход из уровня
-                        } else {
-                            numLeft = random.nextInt(10);
-                            imgLeft.setImageResource(array.imageOne[numLeft]);
-                            imgLeft.startAnimation(a);
-                            textLeft.setText(array.textOne[numLeft]);
+                    }
+                    if (count == 20) {
+                        //выход из уровня
+                    } else {
+                        numLeft = random.nextInt(10);
+                        imgLeft.setImageResource(array.imageOne[numLeft]);
+                        imgLeft.startAnimation(a);
+                        textLeft.setText(array.textOne[numLeft]);
 
+                        numRight = random.nextInt(10);
+
+                        while (numLeft == numRight) {
                             numRight = random.nextInt(10);
-
-                            while (numLeft == numRight) {
-                                numRight = random.nextInt(10);
-                            }
-
-                            imgRight.setImageResource(array.imageOne[numRight]);
-                            imgRight.startAnimation(a);
-                            textRight.setText(array.textOne[numRight]);
-                            imgRight.setEnabled(true);
                         }
+
+                        imgRight.setImageResource(array.imageOne[numRight]);
+                        imgRight.startAnimation(a);
+                        textRight.setText(array.textOne[numRight]);
+
+                        imgRight.setEnabled(true);
                     }
                 }
                 return true;
