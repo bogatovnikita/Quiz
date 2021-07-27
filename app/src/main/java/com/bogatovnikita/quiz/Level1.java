@@ -105,6 +105,7 @@ public class Level1 extends AppCompatActivity {
                 R.id.point17, R.id.point18, R.id.point19, R.id.point20};
 
         final Animation a = AnimationUtils.loadAnimation(Level1.this, R.anim.alpha);
+
         numLeft = random.nextInt(10);
         imgLeft.setImageResource(array.imageOne[numLeft]);
         textLeft.setText(array.textOne[numLeft]);
@@ -146,7 +147,41 @@ public class Level1 extends AppCompatActivity {
 
                         }
                     } else {
+                        if (count > 0) {
+                            if (count == 1) {
+                                count = 0;
+                            } else {
+                                count = count - 2;
+                            }
+                        }
+                        for (int i = 0; i < 19; i++) {
+                            TextView textView = findViewById(progress[i]);
+                            textView.setBackgroundResource(R.drawable.style_points);
+                        }
+                        for (int i = 0; i < count; i++) {
+                            TextView textView = findViewById(progress[i]);
+                            textView.setBackgroundResource(R.drawable.style_points_green);
 
+                        }
+                        if (count == 20) {
+                            //выход из уровня
+                        } else {
+                            numLeft = random.nextInt(10);
+                            imgLeft.setImageResource(array.imageOne[numLeft]);
+                            imgLeft.startAnimation(a);
+                            textLeft.setText(array.textOne[numLeft]);
+
+                            numRight = random.nextInt(10);
+
+                            while (numLeft == numRight) {
+                                numRight = random.nextInt(10);
+                            }
+
+                            imgRight.setImageResource(array.imageOne[numRight]);
+                            imgRight.startAnimation(a);
+                            textRight.setText(array.textOne[numRight]);
+                            imgRight.setEnabled(true);
+                        }
                     }
                 }
                 return true;
