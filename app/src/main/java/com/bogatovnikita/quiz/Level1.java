@@ -22,6 +22,7 @@ import java.util.Random;
 public class Level1 extends AppCompatActivity {
 
     Dialog dialog;
+    Dialog dialogEnd;
 
     public int numLeft;
     public int numRight;
@@ -84,6 +85,42 @@ public class Level1 extends AppCompatActivity {
         });
 
         dialog.show();
+
+        //______________________________________________________________
+        dialogEnd = new Dialog(this);
+        dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialogEnd.setContentView(R.layout.dialogend);
+        dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.MATCH_PARENT);
+        dialogEnd.setCancelable(false);
+
+        TextView btnClose2 = dialogEnd.findViewById(R.id.btn_close);
+        btnClose2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(Level1.this, GameLevels.class);
+                    startActivity(intent);
+                    finish();
+                } catch (Exception e) {
+
+                }
+                dialogEnd.dismiss();
+            }
+        });
+        Button btnContinue2 = dialogEnd.findViewById(R.id.btn_continue);
+        btnContinue2.setOnClickListener(v -> {
+            try {
+                Intent intent = new Intent(Level1.this, Level2.class);
+                startActivity(intent);
+                finish();
+            } catch (Exception e) {
+            }
+            dialog.dismiss();
+        });
+        //______________________________________________________________
+
 
         Button btnBack = findViewById(R.id.button_back);
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -166,6 +203,7 @@ public class Level1 extends AppCompatActivity {
                     }
                     if (count == 20) {
                         //выход из уровня
+                        dialogEnd.show();
                     } else {
                         numLeft = random.nextInt(10);
                         imgLeft.setImageResource(array.imageOne[numLeft]);
@@ -236,6 +274,7 @@ public class Level1 extends AppCompatActivity {
                     }
                     if (count == 20) {
                         //выход из уровня
+                        dialogEnd.show();
                     } else {
                         numLeft = random.nextInt(10);
                         imgLeft.setImageResource(array.imageOne[numLeft]);

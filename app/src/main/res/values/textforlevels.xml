@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="lvltext0">Ноль</string>
     <string name="lvltext1">Один</string>
     <string name="lvltext2">Два</string>
@@ -11,4 +10,15 @@
     <string name="lvltext7">Семь</string>
     <string name="lvltext8">Восемь</string>
     <string name="lvltext9">Девять</string>
+
+    <string name="lvl2text1">I</string>
+    <string name="lvl2text2">II</string>
+    <string name="lvl2text3">III</string>
+    <string name="lvl2text4">IV</string>
+    <string name="lvl2text5">V</string>
+    <string name="lvl2text6">VI</string>
+    <string name="lvl2text7">VII</string>
+    <string name="lvl2text8">VIII</string>
+    <string name="lvl2text9">IX</string>
+    <string name="lvl2text10">X</string>
 </resources>
