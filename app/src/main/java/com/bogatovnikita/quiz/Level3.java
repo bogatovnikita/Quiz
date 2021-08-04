@@ -13,6 +13,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -63,9 +64,14 @@ public class Level3 extends AppCompatActivity {
         previewimg.setImageResource(R.drawable.previeimg_three);
         //Устанавливаем картинку в диалоговое окно - конец
 
+        //Устанавливаем фон диалогового окна - начало
+        LinearLayout dialogfon = dialog.findViewById(R.id.dialogfon);
+        dialogfon.setBackgroundResource(R.drawable.background3);
+        //Устанавливаем фон диалогового окна - конец
+
         //Устанавливаем описание задания - начало
         TextView textdescription = dialog.findViewById(R.id.text_description);
-        textdescription.setText(R.string.leveltwo);
+        textdescription.setText(R.string.levelthree);
         //Устанавливаем описание задания - конец
 
         TextView btnClose = dialog.findViewById(R.id.btn_close);

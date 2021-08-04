@@ -124,16 +124,20 @@ public class Level2 extends AppCompatActivity {
                 dialogEnd.dismiss();
             }
         });
+        //Кнопка "Продолжить" - начало
         Button btnContinue2 = dialogEnd.findViewById(R.id.btn_continue);
         btnContinue2.setOnClickListener(v -> {
             try {
-                Intent intent = new Intent(Level2.this, Level2.class);
+                Intent intent = new Intent(Level2.this, Level3.class);
                 startActivity(intent);
                 finish();
             } catch (Exception e) {
+                //Здесь кода не будет
             }
             dialog.dismiss();
         });
+        //Кнопка "Продолжить" - конец
+
         //______________________________________________________________
 
         Button btnBack = findViewById(R.id.button_back);
