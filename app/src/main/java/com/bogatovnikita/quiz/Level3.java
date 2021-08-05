@@ -50,8 +50,15 @@ public class Level3 extends AppCompatActivity {
         final TextView textLeft = findViewById(R.id.text_left);
         final TextView textRight = findViewById(R.id.text_right);
 
+        //Развернуть игру на весь экран-начало
         Window window = getWindow();
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //Развернуть игру на весь экран-конец
+
+        //Устанавливаем фон диалогового окна - начало
+        ImageView background = findViewById(R.id.iv_background_levels);
+        background.setImageResource(R.drawable.level3);
+        //Устанавливаем фон диалогового окна - конец
 
         dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -163,19 +170,22 @@ public class Level3 extends AppCompatActivity {
 
         final Animation a = AnimationUtils.loadAnimation(Level3.this, R.anim.alpha);
 
-        numLeft = random.nextInt(10);
-        imgLeft.setImageResource(array.imageTwo[numLeft]);
-        textLeft.setText(array.textTwo[numLeft]);
+        numLeft = random.nextInt(16);//Генерируем случайное число
+        imgLeft.setImageResource(array.imageThree[numLeft]);//Достаем из массива картинку
+        textLeft.setText(array.textThree[numLeft]);//Достаем из массива текст
 
-        numRight = random.nextInt(10);
+        numRight = random.nextInt(16);//Генерируем случайное число
 
+        //Цикл с предусловием, проверяющий равенство чисел - начало
         while (numLeft == numRight) {
-            numRight = random.nextInt(10);
+            numRight = random.nextInt(16);
         }
+        //Цикл с предусловием, проверяющий равенство чисел - конец
 
-        imgRight.setImageResource(array.imageTwo[numRight]);
-        textRight.setText(array.textTwo[numRight]);
+        imgRight.setImageResource(array.imageThree[numRight]);//Достаем из массива картинку
+        textRight.setText(array.textThree[numRight]);//Достаем из массива текст
 
+        //Обрабатываем нажатие на левую картинку-начало
         imgLeft.setOnTouchListener((v, event) -> {
 
             if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -223,24 +233,27 @@ public class Level3 extends AppCompatActivity {
                     //выход из уровня
                     dialogEnd.show();
                 } else {
-                    numLeft = random.nextInt(10);
-                    imgLeft.setImageResource(array.imageTwo[numLeft]);
+                    numLeft = random.nextInt(16);//Генерируем случайное число
+                    imgLeft.setImageResource(array.imageThree[numLeft]);//Достаем из массива картинку
                     imgLeft.startAnimation(a);
-                    textLeft.setText(array.textTwo[numLeft]);
+                    textLeft.setText(array.textThree[numLeft]);//Достаем из массива текст
 
-                    numRight = random.nextInt(10);
+                    numRight = random.nextInt(16);//Генерируем случайное число
 
+                    //Цикл с предусловием, проверяющий равенство чисел - начало
                     while (numLeft == numRight) {
-                        numRight = random.nextInt(10);
+                        numRight = random.nextInt(16);
                     }
+                    //Цикл с предусловием, проверяющий равенство чисел - начало
 
-                    imgRight.setImageResource(array.imageTwo[numRight]);
+                    imgRight.setImageResource(array.imageThree[numRight]);//Достаем из массива картинку
                     imgRight.startAnimation(a);
-                    textRight.setText(array.textTwo[numRight]);
+                    textRight.setText(array.textThree[numRight]);//Достаем из массива текст
 
-                    imgRight.setEnabled(true);
+                    imgRight.setEnabled(true);//включаем обратно правую картинку
                 }
             }
+            //Условие касания картинки - конец
             return true;
         });
 
@@ -291,26 +304,30 @@ public class Level3 extends AppCompatActivity {
                     //выход из уровня
                     dialogEnd.show();
                 } else {
-                    numLeft = random.nextInt(10);
-                    imgLeft.setImageResource(array.imageTwo[numLeft]);
+                    numLeft = random.nextInt(16);//генерируем случайное число
+                    imgLeft.setImageResource(array.imageThree[numLeft]);//Достаем картинку из массива
                     imgLeft.startAnimation(a);
-                    textLeft.setText(array.textTwo[numLeft]);
+                    textLeft.setText(array.textThree[numLeft]);//Достаем текст из массива
 
-                    numRight = random.nextInt(10);
+                    numRight = random.nextInt(16);//генерируем случайное число
 
+                    //Цикл с предусловием, проверяет равенство чисел - начало
                     while (numLeft == numRight) {
-                        numRight = random.nextInt(10);
+                        numRight = random.nextInt(16);
                     }
+                    //Цикл с предусловием, проверяет равенство чисел - конец
 
-                    imgRight.setImageResource(array.imageTwo[numRight]);
+                    imgRight.setImageResource(array.imageThree[numRight]);//Достаем картинку из массива
                     imgRight.startAnimation(a);
-                    textRight.setText(array.textTwo[numRight]);
+                    textRight.setText(array.textThree[numRight]);//Достаем текст из массива
 
-                    imgLeft.setEnabled(true);
+                    imgLeft.setEnabled(true);//включаем обратно левую картинку
                 }
             }
+            //Условие касания картинки - конец
             return true;
         });
+        //Обрабатываем нажатие на правую кнопку-конец
     }
 
     @Override

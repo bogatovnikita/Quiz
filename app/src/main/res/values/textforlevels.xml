@@ -21,4 +21,21 @@
     <string name="lvl2text8">VIII</string>
     <string name="lvl2text9">IX</string>
     <string name="lvl2text10">X</string>
+
+    <string name="lvl3text1">Сунь Ятсен</string>
+    <string name="lvl3text2">Юань Шикай</string>
+    <string name="lvl3text3">Ли Юаньхун</string>
+    <string name="lvl3text4">Фэн Гочжан</string>
+    <string name="lvl3text5">Цао Кунь</string>
+    <string name="lvl3text6">Дуань Цижуй</string>
+    <string name="lvl3text7">Гу Вэйцзюнь</string>
+    <string name="lvl3text8">Чан Кайши</string>
+    <string name="lvl3text9">Линь Сэнь</string>
+    <string name="lvl3text10">Ли Цзунжэнь</string>
+    <string name="lvl3text11">Янь Цзягань</string>
+    <string name="lvl3text12">Цзян Цзинго</string>
+    <string name="lvl3text13">Ли Дэнхуэй</string>
+    <string name="lvl3text14">Чэнь Шуйбянь</string>
+    <string name="lvl3text15">Ма Инцзю</string>
+    <string name="lvl3text16">Цай Инвэнь</string>
 </resources>
