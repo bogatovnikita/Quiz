@@ -21,7 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Level3 extends AppCompatActivity {
+public class Level4 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogEnd;
@@ -93,7 +93,7 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception e) {
@@ -140,7 +140,7 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception e) {
@@ -152,7 +152,7 @@ public class Level3 extends AppCompatActivity {
         Button btnContinue2 = dialogEnd.findViewById(R.id.btn_continue);
         btnContinue2.setOnClickListener(v -> {
             try {
-                Intent intent = new Intent(Level3.this, Level4.class);
+                Intent intent = new Intent(Level4.this, Level4.class);
                 startActivity(intent);
                 finish();
             } catch (Exception e) {
@@ -169,7 +169,7 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception e) {
@@ -184,7 +184,7 @@ public class Level3 extends AppCompatActivity {
                 R.id.point12, R.id.point13, R.id.point14, R.id.point15, R.id.point16,
                 R.id.point17, R.id.point18, R.id.point19, R.id.point20};
 
-        final Animation a = AnimationUtils.loadAnimation(Level3.this, R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Level4.this, R.anim.alpha);
 
         numLeft = random.nextInt(16);//Генерируем случайное число
         imgLeft.setImageResource(array.imageThree[numLeft]);//Достаем из массива картинку
@@ -349,7 +349,7 @@ public class Level3 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
-            Intent intent = new Intent(Level3.this, GameLevels.class);
+            Intent intent = new Intent(Level4.this, GameLevels.class);
             startActivity(intent);
             finish();
         } catch (Exception e) {

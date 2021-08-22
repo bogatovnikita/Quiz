@@ -37,7 +37,7 @@ public class Level2 extends AppCompatActivity {
         setContentView(R.layout.universal);
 
         TextView textLevels = findViewById(R.id.tv_levels);
-        textLevels.setText(R.string.level1);
+        textLevels.setText(R.string.level2);
 
 
         final ImageView imgLeft = findViewById(R.id.img_left);
