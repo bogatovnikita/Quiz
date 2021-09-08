@@ -75,4 +75,62 @@ public class Array {
             R.string.lvl3text13, R.string.lvl3text14, R.string.lvl3text15, R.string.lvl3text16,
     };
     //массив для третьего уровня - конец
+
+    //массив для четвертого уровня - начало
+    final int[] imageFour = {
+            R.drawable.level04_ball01,
+            R.drawable.level04_fruit01,
+            R.drawable.level04_ball02,
+            R.drawable.level04_fruit02,
+            R.drawable.level04_ball03,
+            R.drawable.level04_fruit03,
+            R.drawable.level04_ball04,
+            R.drawable.level04_fruit04,
+            R.drawable.level04_ball05,
+            R.drawable.level04_fruit05,
+            R.drawable.level04_ball06,
+            R.drawable.level04_fruit06,
+            R.drawable.level04_ball07,
+            R.drawable.level04_fruit07,
+            R.drawable.level04_ball08,
+            R.drawable.level04_fruit08,
+            R.drawable.level04_ball09,
+            R.drawable.level04_fruit09,
+            R.drawable.level04_ball10,
+            R.drawable.level04_fruit10,
+            R.drawable.level04_ball11,
+            R.drawable.level04_fruit11,
+            R.drawable.level04_ball12,
+            R.drawable.level04_fruit12,
+    };
+
+    final int[] textFour = {
+            R.string.lvl4text1,
+            R.string.lvl4text2,
+            R.string.lvl4text3,
+            R.string.lvl4text4,
+            R.string.lvl4text5,
+            R.string.lvl4text6,
+            R.string.lvl4text7,
+            R.string.lvl4text8,
+            R.string.lvl4text9,
+            R.string.lvl4text10,
+            R.string.lvl4text11,
+            R.string.lvl4text12,
+            R.string.lvl4text13,
+            R.string.lvl4text14,
+            R.string.lvl4text15,
+            R.string.lvl4text16,
+            R.string.lvl4text17,
+            R.string.lvl4text18,
+            R.string.lvl4text19,
+            R.string.lvl4text20,
+            R.string.lvl4text21,
+            R.string.lvl4text22,
+            R.string.lvl4text23,
+            R.string.lvl4text24
+    };
+
+    final int[] strong = {1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0};
+    //массив для четвертого уровня - конец
 }

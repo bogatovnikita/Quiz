@@ -38,4 +38,30 @@
     <string name="lvl3text14">Чэнь Шуйбянь</string>
     <string name="lvl3text15">Ма Инцзю</string>
     <string name="lvl3text16">Цай Инвэнь</string>
+
+    <string name="lvl4text1">Футбольный мяч</string>
+    <string name="lvl4text2">Лимон</string>
+    <string name="lvl4text3">Детский мяч</string>
+    <string name="lvl4text4">Грейпфрут</string>
+    <string name="lvl4text5">Баскетбольный мяч</string>
+    <string name="lvl4text6">Дуриан</string>
+    <string name="lvl4text7">Теннисный мяч</string>
+    <string name="lvl4text8">Инжир</string>
+    <string name="lvl4text9">Мяч для гольфа</string>
+    <string name="lvl4text10">Мандарин</string>
+    <string name="lvl4text11">Шар для боулинга</string>
+    <string name="lvl4text12">Киви</string>
+    <string name="lvl4text13">Мяч для американского фубола</string>
+    <string name="lvl4text14">Апельсин</string>
+    <string name="lvl4text15">Волейбольный мяч</string>
+    <string name="lvl4text16">Манго</string>
+    <string name="lvl4text17">Шар для боулинга</string>
+    <string name="lvl4text18">Личи</string>
+    <string name="lvl4text19">Шайба</string>
+    <string name="lvl4text20">Фейхоа</string>
+    <string name="lvl4text21">Мяч для крикета</string>
+    <string name="lvl4text22">Лайм</string>
+    <string name="lvl4text23">Бейсбольный мяч</string>
+    <string name="lvl4text24">Сицилийский апельсин</string>
+
 </resources>
